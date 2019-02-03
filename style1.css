@@ -271,7 +271,7 @@ border-color: #DADADA;
 
 .footer-menu{
   bottom:24px;
-  position: absolute;
+  text-align: center;
   margin-bottom:0px;
   font-size: 12px;
 }
