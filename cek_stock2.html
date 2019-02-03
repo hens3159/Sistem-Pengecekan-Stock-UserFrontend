@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Oxygen|PT+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+     <link rel="stylesheet" type="text/css" href="style1.css">
+     <script src="myscripts.js"></script>
+
+<style>
+</style>
+
+  </head>
+
+
+  <body>
+
+
+
+
+    <nav class="container-fluid" style="background:#31DB93; height:56px;">
+
+      <div class="row align-items-center navbar-mobile" id="menu_biasa" >
+
+      <div class="col-2"  style="padding-left:16px;">
+        <a href="menu.html" style="font-size:20px;"><i class="fa fa-arrow-left" style="font-size:20px; background:none; color:white;"></i></a>
+      </div>
+      <div class="col-8">
+      <p class="text-center">Cek Stock</p>
+      </div>
+
+      <div class="col-2" style="padding-left: 25px; padding-right: 16px;">
+        <i class="fa fa-search" id="form_cari" style="font-size:20px; background:none; color:white;   cursor: pointer;"></i></a>
+      </div>
+
+    </div>
+
+
+
+        <!-- form pencarian -->
+
+  <div class="row align-items-center navbar-mobile hide" id="form_search" >
+<div class="col-12 "  style="padding:0 16px; margin-top:16px;">
+<div class="input-group mb-3 " >
+  <div class="input-group-prepend">
+    <button class="btn form-stock" type="button" id="button-addon1">
+      <i class="fa fa-arrow-left" id="back_menu" style="font-size:15px; background:none; color:#AAAAAA;"></i></button>
+  </div>
+
+  <input type="text" id="cari" class="form-control form-stock" placeholder="Cari Material" aria-label="Username" aria-describedby="basic-addon1" >
+  <div class="input-group-append">
+
+    <button class="btn form-stock" type="button" id="button-addon2">
+      <i class="fa fa-search" id="search" style="font-size:15px; background:none; color:#AAAAAA;;"></i></button>
+  </div>
+
+
+</div>
+</div>
+</div>
+
+
+</nav>
+
+
+<content>
+
+<div class="container" style="padding:0 8px;">
+<div class="row">
+
+    <div class="col-sm-12">
+      <div class="card card-list">
+        <div class="card-body">
+          <h6 class="card-title" style="">HOSE 22U-62-34611</h6>
+          <p class="card-text" style="">Material: 21104386</p>
+          <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td><li>Unrestricted</li></td>
+                  <td>:</td>
+                  <td>1 PC</td>
+                </tr>
+                <tr>
+                  <td><li>MaValue Unrestrictedry</li></td>
+                  <td>:</td>
+                  <td> IDR 3,400,000</td>
+                </tr>
+                <tr>
+                  <td><li>Harga Satuan</li></td>
+                  <td>:</td>
+                  <td>IDR 3,400,000</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+
+          <div class="card card-list">
+            <div class="card-body">
+              <h6 class="card-title" style="">HOSE 22U-62-34611</h6>
+              <p class="card-text" style="">Material: 21104386</p>
+              <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td><li>Unrestricted</li></td>
+                      <td>:</td>
+                      <td>1 PC</td>
+                    </tr>
+                    <tr>
+                      <td><li>MaValue Unrestrictedry</li></td>
+                      <td>:</td>
+                      <td> IDR 3,400,000</td>
+                    </tr>
+                    <tr>
+                      <td><li>Harga Satuan</li></td>
+                      <td>:</td>
+                      <td>IDR 3,400,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+</div>
+</div>
+
+</content>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+//change menu to form search
+$("#form_cari").click(function(){
+ $("#menu_biasa").addClass("hide")
+ $("#form_search").removeClass("hide")
+})
+
+
+$("#back_menu").click(function(){
+ $("#form_search").addClass("hide")
+ $("#menu_biasa").removeClass("hide")
+})
+
+
+
+//form search change icon and search pencarian
+function checkEmpty(el){
+  if(el.val() === ''){
+    $("#search").removeClass('fa-close')
+    $("#search").addClass('fa-search')
+        // $("#button-addon2").click(function() {
+        //   console.log("koko")
+        // });
+
+  } else {
+    $("#search").removeClass('fa-search')
+    $("#search").addClass('fa-close')
+
+    $("#button-addon2").click(function() {
+     $("#cari").val("")
+     $("#search").removeClass('fa-close')
+     $("#search").addClass('fa-search')
+    });
+
+  }
+}
+
+// listen for when the input/select change
+$('input, select').on('change keyup',function(){
+  checkEmpty($(this));
+});
+
+// loop through the elements when the page loads
+$('input, select').each(function(){
+  checkEmpty($(this));
+});
+
+
+
+
+</script>
+
+
+  </body>
+</html>

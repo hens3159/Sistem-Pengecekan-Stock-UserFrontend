@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Oxygen|PT+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+
+     <link rel="stylesheet" type="text/css" href="style1.css">
+     <script src="myscripts.js"></script>
+
+<style>
+body{
+
+}
+</style>
+
+  </head>
+
+
+  <body>
+
+<!-- Navbar -->
+<nav class="container-fluid" style="background:#31DB93">
+
+  <div class="row align-items-center navbar-mobile">
+  <div class="col-2" style="padding-left:16px;">
+    <a href="login.html" style="font-size:20px;"><i class="fa fa-arrow-left" style="font-size:20px; background:none; color:white;"></i></a>
+  </div>
+  <div class="col-8">
+  <p class="text-center">Daftar</p>
+  </div>
+</div>
+
+</nav>
+
+<content>
+
+  <div class="title-register">
+  <p class="title-register-1">Silakan isi data-data dibawah ini</p>
+  <p class="title-register-2">Pastikan anda mengisi data dengan benar</p>
+</div>
+
+
+<div class="container" style="padding-right:16px; padding-left:16px;">
+
+    <form action="" class="form-register" id="registration-form">
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama" data-validation="required"
+        data-validation-error-msg-required="Wajib diisi">
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="username" placeholder="Buat Username" name="username" data-validation="required"
+        data-validation-error-msg-required="Wajib diisi">
+      </div>
+
+      <div class="form-group">
+       <input type="password" class="form-control" id="password" placeholder="Buat Password" name="password">
+     </div>
+
+     <div class="form-group">
+      <input type="password" class="form-control" id="repeat" placeholder="Konfirmasi Password" name="repeat" data-validation="confirmation"
+      data-validation-confirm="password"  data-validation-error-msg="password tidak sama">
+
+
+    </div>
+
+     <div class="form-group" style="padding: 88px 14px 0 14px;">
+       <input type="submit" class="btn btn-success text-white btn-block" id="myBtn"  value="Daftarkan">
+    </div>
+
+    </form>
+
+</div>
+</content>
+
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal">
+    <div class=" modal-dialog" role="document">
+
+      <div class="modal-content">
+          <div class="konten">
+          <img src="gambar/ceklis.svg" alt="terkirm" width="96px" height="96px" class="img-responsive rounded mx-auto d-block">
+
+          <p class="konten-1"style="">Permintaan Stock Berhasil Dikirim</p>
+          <p class="konten-2" style="">Permintaan akan diterima dan diproses oleh admin</p>
+
+          <button type="button" class="btn btn-success btn-block btn-lg" data-dismiss="modal" id="ok">Ok</button>
+
+        </div>
+        </div>
+
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+$.validate({
+  modules : 'location, date, security, ',
+  onModulesLoaded : function() {
+ $("input[type=submit]").attr("disabled", "disabled");
+
+  },
+  onError : function($form) {
+     alert('Validation of form '+$form.attr('id')+' failed!');
+   },
+  onSuccess : function($form) {
+    //    alert('The form '+$form.attr('id')+' is valid!');
+        return false; // Will stop the submission of the form
+      },
+    onElementValidate : function(valid, $el, $form, errorMess) {
+    //  console.log('Input ' +$el.attr('name')+ ' is ' + ( valid ? 'Henhen':'NOT VALID') );
+
+
+      var name = $('#name').val().length
+      var username = $('#username').val().length
+      var password_length = $('#password').val().length
+      var repeat_length = $('#repeat').val().length
+      var password = $.trim($('#password').val())
+      var repeat = $.trim($('#repeat').val())
+
+      if(name !=0 && username !=0 && password_length !=0 && repeat_length !=0  ){
+        if (password == repeat){
+         $("input[type=submit]").removeAttr("disabled");
+
+         $("#myBtn").click(function(){
+           $("#myModal").modal();
+
+           $("#ok").click(function(){
+             window.location = "menu.html"
+           })
+
+
+         })
+
+     }else {
+       $("input[type=submit]").attr("disabled", "disabled");
+     }
+
+      }else {
+        $("input[type=submit]").attr("disabled", "disabled");
+      }
+},
+
+});
+
+</script>
+
+
+
+
+  </body>
+</html>

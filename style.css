@@ -1,0 +1,198 @@
+
+*{
+      box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+h1{
+font-size: 6em;
+letter-spacing: -1.5px;
+margin:0;
+
+}
+
+h2{
+font-size: 3.75em;
+letter-spacing: -0.5px;
+margin:0;
+}
+
+h3{
+font-size: 3em;
+letter-spacing:0;
+margin:0;
+}
+
+h4{
+font-size: 2.12em;
+letter-spacing: 0.25px;
+margin:0;
+
+}
+
+h5{
+font-size: 1.5em;
+letter-spacing: 0;
+margin:0;
+}
+
+h6{
+font-size: 1.25em;
+letter-spacing: 0.15;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+a,i{
+  margin: 0;
+  padding: 0;
+}
+
+/* ---menu atas
+   - Logo, login, dll
+
+*/
+
+
+.con-mobile{
+  margin:55px 44px;
+}
+
+.menu{
+  background-color:#0F95C8;
+  height:55px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.coco{
+  margin:0 17px;
+  background-color:#0F95C8;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  height: 24px;
+}
+
+.menu li{
+  background: none;
+  list-style-type: none;
+
+}
+
+.menu a{
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  color: white;
+}
+
+.form-login{
+  margin-top: 15px;
+  color: white;
+}
+
+.button{
+  padding-top:100px ;
+}
+
+
+.con-form{
+  margin : 15px 15px 15px 15px;
+  padding: 28px 44px;
+  background-color: white;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  color: #808080;
+}
+
+.con-laporan{
+  color: #808080;
+}
+
+.con-laporan h6{
+  text-align: center;
+  margin:12px 0;
+  color: #808080;
+}
+
+.table{
+  text-align: center;
+
+}
+
+.head{
+  background: white;
+}
+
+.head th{
+  text-align: center;
+}
+
+.table>tbody{
+  box-sizing: border-box;
+}
+.tab{
+  border-top:5px solid #f8f8f8;
+  border-bottom:5px solid #f8f8f8;
+  background: white;
+}
+.konten{
+  padding:33px 43px;;
+}
+
+
+.show-data{
+  margin:26px 33px;
+  color: #808080;
+}
+
+.data-con{
+  width: 100%;
+  margin:15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.label-data{
+  width:40%;
+}
+
+.titik-dua{
+  width:5%;
+}
+
+.input-data{
+    width:55%;
+    font-weight: bold;
+}
+
+
+.data-con::after{
+  content: "";
+  clear: both;
+  display: table;
+}
