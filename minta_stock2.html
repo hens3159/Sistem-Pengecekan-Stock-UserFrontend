@@ -64,7 +64,7 @@
 
       <div class="form-group">
         <label for="comment" style="font-size:12px;">Keterangan:</label>
-        <textarea class="form-control" rows="5" id="comment" placeholder="Tulis Keterangan" data-validation="required"         data-validation-error-msg-required="Wajib diisi"></textarea>
+        <textarea class="form-control" rows="5" id="comment" placeholder="Tulis Keterangan (bila ada)"></textarea>
      </div>
 
 
@@ -127,7 +127,7 @@ $.validate({
       var jumlah = $('#jumlah').val().length
       var komen = $('#comment').val().length
 
-      if(name !=0 && jumlah !=0 && komen !=0 ){
+      if(name !=0 && jumlah !=0  ){
         $("input[type=submit]").removeAttr("disabled")
 
           $("#myBtn").click(function(){
