@@ -31,29 +31,10 @@
 
     <nav class="container-fluid" style="background:#31DB93; height:56px;">
 
-      <div class="row align-items-center navbar-mobile" id="menu_biasa" >
-
-      <div class="col-2"  style="padding-left:16px;">
-        <a href="minta_.html" style="font-size:20px;"><i class="fa fa-arrow-left" style="font-size:20px; background:none; color:white;"></i></a>
-      </div>
-      <div class="col-8">
-      <p class="text-center">Cek Stock</p>
-      </div>
-
-      <div class="col-2" style="padding-left: 25px; padding-right: 16px;">
-        <i class="fa fa-search" id="form_cari" style="font-size:20px; float:right; background:none; color:white;   cursor: pointer;"></i>
-        <span style=" content: ; clear: both; display: table;" </span>
-      </div>
-
-    </div>
-
-
-
-        <!-- form pencarian -->
-
-  <div class="row align-items-center navbar-mobile hide" id="form_search" >
+  <div class="row align-items-center navbar-mobile" id="form_search" >
 <div class="col-12 "  style="padding:0 16px; height:42px;">
-  <form action="/cari_stock.html" method="get" id="form_submit">
+
+  <form action="/pencarian_stock" method="get" id="form_submit">
 
 <div class="input-group mb-3 " >
   <div class="input-group-prepend">
@@ -136,57 +117,6 @@
                 </div>
               </div>
 
-              <div class="card card-list">
-                <div class="card-body">
-                  <h6 class="card-title" style="">HOSE 22U-62-34611</h6>
-                  <p class="card-text" style="">Material: 21104386</p>
-                  <table class="table table-borderless" style="margin:0px;">
-                      <tbody>
-                        <tr>
-                          <td><li>Unrestricted</li></td>
-                          <td>:</td>
-                          <td>1 PC</td>
-                        </tr>
-                        <tr>
-                          <td><li>MaValue Unrestrictedry</li></td>
-                          <td>:</td>
-                          <td> IDR 3,400,000</td>
-                        </tr>
-                        <tr>
-                          <td><li>Harga Satuan</li></td>
-                          <td>:</td>
-                          <td>IDR 3,400,000</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    </div>
-                  </div>
-
-                <div class="card card-list">
-                    <div class="card-body">
-                      <h6 class="card-title" style="">HOSE 22U-62-34611</h6>
-                      <p class="card-text" style="">Material: 21104386</p>
-                      <table class="table table-borderless">
-                          <tbody>
-                            <tr>
-                              <td><li>Unrestricted</li></td>
-                              <td>:</td>
-                              <td>1 PC</td>
-                            </tr>
-                            <tr>
-                              <td><li>MaValue Unrestrictedry</li></td>
-                              <td>:</td>
-                              <td> IDR 3,400,000</td>
-                            </tr>
-                            <tr>
-                              <td><li>Harga Satuan</li></td>
-                              <td>:</td>
-                              <td>IDR 3,400,000</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        </div>
-                      </div>
 
         </div>
       </div>
@@ -220,18 +150,10 @@ $(function() {
     });
 
 
-//change menu to form search
-$("#form_cari").click(function(){
- $("#menu_biasa").addClass("hide")
- $("#form_search").removeClass("hide")
-})
-
-
-$("#button-addon1").click(function(){
- $("#form_search").addClass("hide")
- $("#menu_biasa").removeClass("hide")
-})
-
+//menu kembali
+    $("#back_menu").click(function(){
+      window.location = "cek_stock2.html"
+    })
 
 
 //form search change icon and search pencarian

@@ -122,16 +122,14 @@ a,i,p{
   margin-top:32px;
 }
 
-
-
 .form-login input{
   height: 54px;
   border-radius: 4px;
 }
 
-/* .form-login input[type=button]{
+.form-login input[type=submit]{
   box-shadow:0 2px 6px 0 rgba(0, 0, 0, 0.2);
-} */
+}
 
 .form-login input[type=button]:hover{
   background: none;
@@ -331,9 +329,7 @@ background: none;
   margin-top: 8px;
 }
 
-.card-list .card-body{
-      height: 140px;
-}
+
 
 .card-list:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -341,6 +337,8 @@ background: none;
 
 .card-list .card-title{
   margin-bottom:0px;
+  font-weight:bold;
+  color:#31DB93;
 }
 
 .card-list .card-text{
@@ -361,10 +359,18 @@ background: none;
   font-size: 14px;
 }
 
+.text_pencarian{
+  width:100%;
+  text-align: center;
+}
+
 .kata_kunci{
   font-size: 12px;
   color: gray;
+  width:100%;
+  text-align: center;
 }
+
 
 /*minta stock */
 
